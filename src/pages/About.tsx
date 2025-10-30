@@ -1,195 +1,191 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Code2, Target, Users, Wrench } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Code2, Database, BarChart3, Brain } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="animate-fade-in space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-foreground mb-2">About This Project</h1>
-        <p className="text-muted-foreground">
+    <div className="space-y-8">
+      <div className="space-y-2">
+        <h1 className="text-4xl font-bold text-foreground">About This Project</h1>
+        <p className="text-lg text-muted-foreground">
           Healthcare Decision Support System for Diabetes Prediction and Risk Analysis
         </p>
       </div>
 
-      <Card className="shadow-card">
+      <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/10 to-primary/5">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Target className="h-6 w-6 text-primary" />
-            Project Overview
-          </CardTitle>
+          <CardTitle className="text-2xl">Project Overview</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <p className="text-muted-foreground leading-relaxed">
-            This dashboard is a comprehensive healthcare decision support system designed to assist in diabetes 
-            prediction and risk analysis. It provides healthcare professionals and researchers with powerful tools 
-            to visualize datasets, perform data analysis, and predict diabetes risk based on various health metrics.
+          <p className="text-foreground leading-relaxed">
+            This dashboard is part of a mini-project demonstrating the application of data mining and 
+            data warehousing techniques in healthcare. The project focuses on diabetes prediction and 
+            risk analysis using the Pima Indians Diabetes Database.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            The system combines interactive data visualization capabilities similar to Power BI with predictive 
-            analytics to offer actionable insights into diabetes risk factors. Users can upload their own datasets, 
-            explore data through multiple chart types, and get instant risk assessments based on patient data.
+            The system combines exploratory data analysis, unsupervised learning (clustering), and 
+            supervised learning (classification) to provide comprehensive insights into diabetes risk factors 
+            and enable predictive healthcare decision support.
           </p>
         </CardContent>
       </Card>
 
-      <Card className="shadow-card">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card className="border-2 border-border hover:shadow-lg transition-all">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3">
+              <Database className="h-6 w-6 text-primary" />
+              Dataset Information
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2 text-sm">
+            <p><strong>Source:</strong> Pima Indians Diabetes Database</p>
+            <p><strong>Samples:</strong> 768 patient records</p>
+            <p><strong>Features:</strong> 8 health indicators</p>
+            <ul className="ml-4 space-y-1 text-muted-foreground">
+              <li>• Pregnancies</li>
+              <li>• Glucose</li>
+              <li>• Blood Pressure</li>
+              <li>• Skin Thickness</li>
+              <li>• Insulin</li>
+              <li>• BMI</li>
+              <li>• Diabetes Pedigree Function</li>
+              <li>• Age</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="border-2 border-border hover:shadow-lg transition-all">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3">
+              <Brain className="h-6 w-6 text-primary" />
+              Methodology
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm">
+            <div>
+              <p className="font-semibold text-foreground">1. Data Preprocessing</p>
+              <p className="text-muted-foreground">Cleaning, normalization, and feature engineering</p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">2. Exploratory Data Analysis</p>
+              <p className="text-muted-foreground">Statistical analysis and visualization</p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">3. Clustering Analysis</p>
+              <p className="text-muted-foreground">K-Means algorithm for patient segmentation</p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">4. Classification</p>
+              <p className="text-muted-foreground">Rule-based and ML models for prediction</p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="border-2 border-border hover:shadow-lg transition-all">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3">
+              <Code2 className="h-6 w-6 text-primary" />
+              Technologies Used
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary"></span>
+                <strong className="text-foreground">Frontend:</strong> React, TypeScript, Tailwind CSS
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary"></span>
+                <strong className="text-foreground">Visualization:</strong> Recharts
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary"></span>
+                <strong className="text-foreground">Data Analysis:</strong> Python, Pandas, Scikit-learn
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary"></span>
+                <strong className="text-foreground">UI Components:</strong> shadcn/ui, Lucide React
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="border-2 border-border hover:shadow-lg transition-all">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3">
+              <BarChart3 className="h-6 w-6 text-primary" />
+              Key Features
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-success"></span>
+                Interactive data visualization
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-success"></span>
+                Real-time risk prediction
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-success"></span>
+                Patient clustering and segmentation
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-success"></span>
+                Comprehensive data insights
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-success"></span>
+                Responsive and accessible design
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
+
+      <Card className="border-2 border-border">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Users className="h-6 w-6 text-primary" />
-            Development Team
-          </CardTitle>
+          <CardTitle className="text-2xl">Project Contributors</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-2">
-            <p className="text-muted-foreground">
-              <span className="font-semibold text-foreground">Developed by:</span> Zeeshan
-            </p>
-            <p className="text-muted-foreground">
-              <span className="font-semibold text-foreground">Role:</span> Full-Stack Developer & Healthcare Analytics Specialist
-            </p>
+          <div className="space-y-4">
+            <div className="flex items-start gap-4 p-4 bg-accent rounded-lg">
+              <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
+                Z
+              </div>
+              <div>
+                <p className="font-semibold text-lg text-foreground">Zeeshan</p>
+                <p className="text-sm text-muted-foreground">TY Computer Engineering Student</p>
+                <p className="text-xs text-muted-foreground mt-2">
+                  Responsible for data analysis, model development, and dashboard implementation
+                </p>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
 
-      <Card className="shadow-card">
+      <Card className="border-2 border-border bg-muted">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Wrench className="h-6 w-6 text-primary" />
-            Technologies Used
-          </CardTitle>
+          <CardTitle>Project Purpose</CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="p-4 bg-secondary rounded-lg">
-              <h3 className="font-semibold mb-2 text-secondary-foreground">Frontend Framework</h3>
-              <p className="text-sm text-muted-foreground">React 18 with TypeScript</p>
-            </div>
-            <div className="p-4 bg-secondary rounded-lg">
-              <h3 className="font-semibold mb-2 text-secondary-foreground">Styling</h3>
-              <p className="text-sm text-muted-foreground">Tailwind CSS</p>
-            </div>
-            <div className="p-4 bg-secondary rounded-lg">
-              <h3 className="font-semibold mb-2 text-secondary-foreground">Charts & Visualization</h3>
-              <p className="text-sm text-muted-foreground">Recharts</p>
-            </div>
-            <div className="p-4 bg-secondary rounded-lg">
-              <h3 className="font-semibold mb-2 text-secondary-foreground">Data Processing</h3>
-              <p className="text-sm text-muted-foreground">PapaParse</p>
-            </div>
-            <div className="p-4 bg-secondary rounded-lg">
-              <h3 className="font-semibold mb-2 text-secondary-foreground">UI Components</h3>
-              <p className="text-sm text-muted-foreground">shadcn/ui</p>
-            </div>
-            <div className="p-4 bg-secondary rounded-lg">
-              <h3 className="font-semibold mb-2 text-secondary-foreground">Icons</h3>
-              <p className="text-sm text-muted-foreground">Lucide React</p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card className="shadow-card">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Code2 className="h-6 w-6 text-primary" />
-            Key Features
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2">
-              <span className="h-2 w-2 rounded-full bg-primary mt-2" />
-              <span className="text-muted-foreground">
-                <strong className="text-foreground">CSV Data Upload:</strong> Import diabetes datasets for analysis
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="h-2 w-2 rounded-full bg-primary mt-2" />
-              <span className="text-muted-foreground">
-                <strong className="text-foreground">Data Insights:</strong> View data summaries, missing values, and basic statistics
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="h-2 w-2 rounded-full bg-primary mt-2" />
-              <span className="text-muted-foreground">
-                <strong className="text-foreground">Interactive Visualizations:</strong> Create bar charts, line charts, pie charts, and scatter plots
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="h-2 w-2 rounded-full bg-primary mt-2" />
-              <span className="text-muted-foreground">
-                <strong className="text-foreground">Risk Prediction:</strong> Rule-based diabetes risk assessment with color-coded results
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="h-2 w-2 rounded-full bg-primary mt-2" />
-              <span className="text-muted-foreground">
-                <strong className="text-foreground">Responsive Design:</strong> Fully functional on desktop, tablet, and mobile devices
-              </span>
-            </li>
+        <CardContent className="space-y-3 text-sm">
+          <p className="text-foreground leading-relaxed">
+            The primary objective of this project is to demonstrate the practical application of data mining 
+            techniques in healthcare decision support systems. By analyzing historical patient data, we can:
+          </p>
+          <ul className="space-y-2 text-muted-foreground ml-6">
+            <li>• Identify key risk factors contributing to diabetes</li>
+            <li>• Segment patients into risk-based clusters for targeted interventions</li>
+            <li>• Provide accurate risk predictions to support clinical decision-making</li>
+            <li>• Enable early detection and preventive healthcare strategies</li>
+            <li>• Improve patient outcomes through data-driven insights</li>
           </ul>
-        </CardContent>
-      </Card>
-
-      <Card className="shadow-card">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Target className="h-6 w-6 text-primary" />
-            Project Goals & Future Scope
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div>
-            <h3 className="font-semibold mb-2">Current Goals</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              <li className="flex items-start gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent mt-2" />
-                Provide an intuitive interface for diabetes data analysis
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent mt-2" />
-                Enable quick risk assessments for healthcare decision-making
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent mt-2" />
-                Demonstrate the power of data visualization in healthcare
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-2">Future Enhancements</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              <li className="flex items-start gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent mt-2" />
-                Integration with machine learning models for improved prediction accuracy
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent mt-2" />
-                Backend API for data storage and user authentication
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent mt-2" />
-                Real-time data updates and collaborative features
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent mt-2" />
-                Advanced preprocessing and feature engineering tools
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent mt-2" />
-                Export functionality for reports and visualizations
-              </li>
-            </ul>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card className="shadow-card bg-gradient-primary text-white">
-        <CardContent className="pt-6">
-          <p className="text-center text-sm">
-            This project demonstrates the intersection of healthcare, data science, and modern web technologies 
-            to create meaningful tools for diabetes prediction and analysis.
+          <p className="text-xs text-muted-foreground italic mt-4">
+            This project was developed as part of a Data Mining and Data Warehousing course to showcase 
+            the integration of machine learning, data visualization, and web technologies in creating 
+            practical healthcare solutions.
           </p>
         </CardContent>
       </Card>
