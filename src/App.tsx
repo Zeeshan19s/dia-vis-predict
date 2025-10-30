@@ -8,6 +8,7 @@ import { DashboardLayout } from "@/components/DashboardLayout";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import Visualization from "./pages/Visualization";
+import Clustering from "./pages/Clustering";
 import Prediction from "./pages/Prediction";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/upload" element={<Upload />} />
               <Route path="/visualization" element={<Visualization />} />
+              <Route path="/clustering" element={<Clustering />} />
               <Route path="/prediction" element={<Prediction />} />
               <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
