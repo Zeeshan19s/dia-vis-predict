@@ -13,6 +13,10 @@ import Prediction from "./pages/Prediction";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
+// 🆕 Newly added imports for prediction form and data visualization
+import PredictionForm from "./pages/PredictionForm";
+import DataVisualization from "./pages/DataVisualization";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -30,6 +34,11 @@ const App = () => (
               <Route path="/clustering" element={<Clustering />} />
               <Route path="/prediction" element={<Prediction />} />
               <Route path="/about" element={<About />} />
+              
+              {/* 🆕 Added routes for new pages */}
+              <Route path="/predict" element={<PredictionForm />} />
+              <Route path="/visualize" element={<DataVisualization />} />
+              
               <Route path="*" element={<NotFound />} />
             </Routes>
           </DashboardLayout>
