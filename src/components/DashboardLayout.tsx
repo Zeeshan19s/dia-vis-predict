@@ -1,17 +1,6 @@
 import { ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
-import { 
-  Home, 
-  Upload, 
-  BarChart3, 
-  Activity, 
-  Info, 
-  Menu, 
-  X, 
-  GitBranch,
-  FileSpreadsheet,
-  PieChart
-} from 'lucide-react';
+import { Home, Upload, BarChart3, Activity, Info, Menu, X, GitBranch } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -19,15 +8,12 @@ interface DashboardLayoutProps {
   children: ReactNode;
 }
 
-// ✅ Added new links for "Prediction Form" and "Data Visualization"
 const navItems = [
   { name: 'Home', path: '/', icon: Home },
   { name: 'Dataset Upload', path: '/upload', icon: Upload },
   { name: 'Visualization', path: '/visualization', icon: BarChart3 },
   { name: 'Clustering', path: '/clustering', icon: GitBranch },
   { name: 'Prediction', path: '/prediction', icon: Activity },
-  { name: 'Prediction Form', path: '/predict', icon: FileSpreadsheet },   // 🆕 added
-  { name: 'Data Visualization', path: '/visualize', icon: PieChart },     // 🆕 added
   { name: 'About', path: '/about', icon: Info },
 ];
 
