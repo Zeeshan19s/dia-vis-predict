@@ -18,14 +18,14 @@ interface PredictionFormData {
 
 const Prediction = () => {
   const [formData, setFormData] = useState<PredictionFormData>({
-    pregnancies: '',
-    glucose: '',
-    bloodPressure: '',
-    skinThickness: '',
-    insulin: '',
-    bmi: '',
-    diabetesPedigree: '',
-    age: '',
+    pregnancies: '1',
+    glucose: '120',
+    bloodPressure: '70',
+    skinThickness: '20',
+    insulin: '80',
+    bmi: '25.0',
+    diabetesPedigree: '0.5',
+    age: '30',
   });
 
   const [prediction, setPrediction] = useState<{ risk: string; color: string; icon: any } | null>(null);
