@@ -145,26 +145,42 @@ const About = () => {
       </div>
 
       <Card className="border-2 border-border">
-        <CardHeader>
-          <CardTitle className="text-2xl">Project Contributors</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            <div className="flex items-start gap-4 p-4 bg-accent rounded-lg">
-              <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
-                Z
-              </div>
-              <div>
-                <p className="font-semibold text-lg text-foreground">Zeeshan</p>
-                <p className="text-sm text-muted-foreground">TY Computer Engineering Student</p>
-                <p className="text-xs text-muted-foreground mt-2">
-                  Responsible for data analysis, model development, and dashboard implementation
-                </p>
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+  <CardHeader>
+    <CardTitle className="text-2xl">Project Contributors</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <div className="space-y-4">
+      {/* Zeeshan */}
+      <div className="flex items-start gap-4 p-4 bg-accent rounded-lg">
+        <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
+          Z
+        </div>
+        <div>
+          <p className="font-semibold text-lg text-foreground">Zeeshan</p>
+          <p className="text-sm text-muted-foreground">TY Computer Engineering Student</p>
+          <p className="text-xs text-muted-foreground mt-2">
+            Responsible for data analysis, model development, and dashboard implementation.
+          </p>
+        </div>
+      </div>
+
+      {/* Swayam Mandhani */}
+      <div className="flex items-start gap-4 p-4 bg-accent rounded-lg">
+        <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
+          S
+        </div>
+        <div>
+          <p className="font-semibold text-lg text-foreground">Swayam Mandhani</p>
+          <p className="text-sm text-muted-foreground">TY Computer Engineering Student</p>
+          <p className="text-xs text-muted-foreground mt-2">
+            Responsible for frontend development, UI design, and project deployment on Vercel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </CardContent>
+</Card>
+
 
       <Card className="border-2 border-border bg-muted">
         <CardHeader>
